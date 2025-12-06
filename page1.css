@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffe8f2, #ffd3e8);
+  overflow: hidden;
+}
+
+/* Background clouds + stars */
+.cloud {
+  width: 120px; height: 70px;
+  background: #ffe6f1;
+  border-radius: 50px;
+  filter: blur(1px);
+  position: absolute;
+}
+.c1 { top: 50px; left: 40px; }
+.c2 { top: 80px; right: 40px; }
+
+.star {
+  width: 10px; height: 10px;
+  background: white;
+  border-radius: 3px;
+  position: absolute;
+  animation: blink 2s infinite;
+}
+.s1 { left: 20%; top: 70%; }
+.s2 { left: 40%; top: 80%; }
+.s3 { left: 80%; top: 60%; }
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+/* Main card */
+.card {
+  width: 360px;
+  padding: 25px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 0 30px rgba(255, 100, 160, 0.25);
+  text-align: center;
+  position: relative;
+}
+
+/* Mac dots */
+.dots { display: flex; gap: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5e5e; }
+.yellow { background: #ffd75e; }
+.green { background: #5eff7c; }
+
+.head { display: flex; justify-content: space-between; align-items: center; }
+
+.title {
+  font-size: 14px;
+  color: #90546c;
+}
+
+/* Hero heading */
+.hero {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+/* Typing text */
+.typing {
+  min-height: 40px;
+  color: #7a3d4f;
+}
+
+#cursor {
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  50% { opacity: 0; }
+}
+
+/* Button */
+.btn {
+  display: block;
+  width: max-content;
+  margin: 25px auto 0;
+  padding: 14px 22px;
+  background: linear-gradient(90deg, #ff4f9a, #ff79b7);
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(255, 40, 120, 0.3);
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Kitty sticker */
+.kitty {
+  width: 80px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Heart particles */
+#particles svg {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+  0% { opacity: 0; transform: translateY(0); }
+  10% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-500px); }
+}
